@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/owl.carousel.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/flaticon.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/magnific-popup.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/owl.carousel.css" />
+    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/css/style.css" />
 
 
     <!--[if lt IE 9]>

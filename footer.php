@@ -5,12 +5,12 @@
 
 
 <!--====== Javascripts & Jquery ======-->
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/magnific-popup.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/circle-progress.min.js"></script>
-<script src="js/main.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/jquery-2.1.4.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/magnific-popup.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/owl.carousel.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/circle-progress.min.js"></script>
+<script src="<?= get_template_directory_uri(); ?>/js/main.js"></script>
 </body>
 
 </html>
