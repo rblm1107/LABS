@@ -9,7 +9,7 @@
 <div class="hero-section">
     <div class="hero-content">
         <div class="hero-center">
-            <img src="img/big-logo.png" alt="">
+            <img src="wp-content/themes/labs-theme/img/big-logo.png" alt="">
             <p>Get your freebie template now!</p>
         </div>
     </div>
@@ -86,7 +86,7 @@
             <div class="intro-video">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <img src="img/video.jpg" alt="">
+                        <img src="wp-content/themes/labs-theme/img/video.jpg" alt="">
                         <a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
                             <i class="fa fa-play"></i>
                         </a>
@@ -115,7 +115,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/01.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/01.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -129,7 +129,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/02.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/02.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -143,7 +143,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/01.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/01.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -157,7 +157,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/02.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/02.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -171,7 +171,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/01.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/01.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -185,7 +185,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="img/avatar/02.jpg" alt="">
+                                <img src="wp-content/themes/labs-theme/img/avatar/02.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>
@@ -336,7 +336,7 @@
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/1.jpg" alt="">
+                    <img src="wp-content/themes/labs-theme/img/team/1.jpg" alt="">
                     <h2>Christinne Williams</h2>
                     <h3>Project Manager</h3>
                 </div>
@@ -344,7 +344,7 @@
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/2.jpg" alt="">
+                    <img src="wp-content/themes/labs-theme/img/team/2.jpg" alt="">
                     <h2>Christinne Williams</h2>
                     <h3>Junior developer</h3>
                 </div>
@@ -352,7 +352,7 @@
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/3.jpg" alt="">
+                    <img src="wp-content/themes/labs-theme/img/team/3.jpg" alt="">
                     <h2>Christinne Williams</h2>
                     <h3>Digital designer</h3>
                 </div>
@@ -422,4 +422,4 @@
 
 
 <!-- Footer section -->
-<?php get_footer();?>
+<?php get_footer(); ?>
