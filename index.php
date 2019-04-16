@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php get_header();
+$carousel_title = get_theme_mod('titre-carousel');
+$first_image = get_theme_mod('image1');
+$second_image = get_theme_mod('image2');
+?>
 
 <!-- Header section end -->
 
@@ -63,7 +67,10 @@
         </div>
     </div>
     <!-- card section end-->
-
+    <?php
+    $para1 = get_theme_mod('text-left');
+    $para2 = get_theme_mod('text-right');
+    ?>
 
     <!-- About contant -->
     <div class="about-contant">
@@ -73,14 +80,14 @@
             </div>
             <div class="row">
                 <div class="col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequat ante ac congue. Quisque porttitor porttitor tempus. Donec maximus ipsum non ornare vporttitor porttitorestibulum. Sed libero nibh, feugiat at enim id, bibendum sollicitudin arcu.</p>
+                    <p><?= $para1; ?></p>
                 </div>
                 <div class="col-md-6">
-                    <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. Quisque porttitor porttitorlaoreet vel risus et luctus.</p>
+                    <p><?= $para2; ?></p>
                 </div>
             </div>
             <div class="text-center mt60">
-                <a href="" class="site-btn">Browse</a>
+                <a href="http://localhost/LABS-project/blog/" class="site-btn">View more</a>
             </div>
             <!-- popup video -->
             <div class="intro-video">
