@@ -13,7 +13,7 @@ class Scripts
         wp_enqueue_style('media', get_template_directory_uri() . '/css/media.css');
         wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
         wp_enqueue_style('style', get_template_directory_uri() . '/css/style.css');
-        wp_enqueue_style('google-font', get_template_directory_uri() . 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700');
+        wp_enqueue_style('google-font', 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700');
 
         // enregistrement du scripts
         //wp_enqueue_script( string $handle, string $src = '', array $deps = array(), string|bool|null $ver = false, bool $in_footer = false )
