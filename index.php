@@ -68,6 +68,9 @@ $second_image = get_theme_mod('image2');
     </div>
     <!-- card section end-->
     <?php
+    $titreBegin = get_theme_mod('titreBegin');
+    $titreSpan = get_theme_mod('titreSpan');
+    $titreEnd = get_theme_mod('titreEnd');
     $para1 = get_theme_mod('text-left');
     $para2 = get_theme_mod('text-right');
     ?>
@@ -76,7 +79,8 @@ $second_image = get_theme_mod('image2');
     <div class="about-contant">
         <div class="container">
             <div class="section-title">
-                <h2>Get in <span>the Lab</span> and discover the world</h2>
+                <h2><?= $titreBegin; ?> <span><?= $titreSpan; ?></span> <?= $titreEnd; ?></h2>
+                <!-- <h2>Get in <span>the Lab</span> and discover the world</h2> -->
             </div>
             <div class="row">
                 <div class="col-md-6">

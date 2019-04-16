@@ -57,6 +57,18 @@ class Customiser
             'title' => 'modifier les about'
         ]);
         //settings
+        $wp_customize->add_setting('titreBegin', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('titreSpan', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('titreEnd', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
         $wp_customize->add_setting('text-left', [
             'type' => 'theme_mod',
             'sanitize_callback' => 'sanitize_textarea_field'
@@ -67,6 +79,27 @@ class Customiser
         ]);
 
         //control
+        $wp_customize->add_control('about-control-title', [
+            'section' => 'about',
+            'settings' => 'titreBegin',
+            'label' => 'The title begin',
+            'description' => 'change text',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('about-control-title-span', [
+            'section' => 'about',
+            'settings' => 'titreSpan',
+            'label' => 'The span text',
+            'description' => 'change text',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('about-control-title-end', [
+            'section' => 'about',
+            'settings' => 'titreEnd',
+            'label' => 'The title end',
+            'description' => 'change text',
+            'type' => 'text'
+        ]);
         $wp_customize->add_control('about-control-themes', [
             'section' => 'about',
             'settings' => 'text-left',
