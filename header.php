@@ -21,7 +21,7 @@
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader">
-            <img src="wp-content/themes/labs-theme/img/logo.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
             <h2>Loading.....</h2>
         </div>
     </div>
@@ -30,7 +30,7 @@
     <!-- Header section -->
     <header class="header-section">
         <div class="logo">
-            <img src="wp-content/themes/labs-theme/img/logo.png" alt=""><!-- Logo -->
+            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""><!-- Logo -->
         </div>
         <!-- Navigation -->
         <div class="responsive"><i class="fa fa-bars"></i></div>
@@ -45,9 +45,23 @@
             <?php
             wp_nav_menu([
                 'menu' => 'menu-principal',
-                'menu-class ' => 'menu-list',
-                'container' => "",
-                'theme_location' => 'menu-principal',
+                'container'       => 'div',
+                'container_class' => '',
+                'container_id'    => '',
+                'menu_class'      => 'menu-list',
+                'menu_id'         => '',
+                'echo'            => true,
+                'fallback_cb'     => 'wp_page_menu',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'item_spacing'    => 'preserve',
+                'depth'           => 0,
+                'walker'          => '',
+                'theme_location'  => 'menu-parincipal',
             ]);
             ?>
         </nav>
+    </header>
