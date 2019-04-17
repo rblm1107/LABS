@@ -111,7 +111,13 @@ $second_image = get_theme_mod('second-image');
 </div>
 <!-- About section end -->
 
-
+<?php
+$titre_client_test = get_theme_mod('client-test-titre');
+$slid1_text_left = get_theme_mod('slid1-text-left');
+$client1_image = get_theme_mod('client1-image');
+$slid1_left_person_name = get_theme_mod('slid1-left-person-name');
+$slid1_left_person_info = get_theme_mod('slid1-left-person-info');
+?>
 <!-- Testimonial section -->
 <div class="testimonial-section pb100">
     <div class="test-overlay"></div>
@@ -119,20 +125,34 @@ $second_image = get_theme_mod('second-image');
         <div class="row">
             <div class="col-md-8 col-md-offset-4">
                 <div class="section-title left">
-                    <h2>What our clients say</h2>
+                    <h2><?php echo $titre_client_test; ?></h2>
                 </div>
                 <div class="owl-carousel" id="testimonial-slide">
                     <!-- single testimonial -->
                     <div class="testimonial">
                         <span>‘​‌‘​‌</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
+                        <p><?= $slid1_text_left; ?></p>
                         <div class="client-info">
                             <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/01.jpg" alt="">
+                                <img src="<?php echo $client1_image; ?>" alt="">
                             </div>
                             <div class="client-name">
-                                <h2>Michael Smith</h2>
-                                <p>CEO Company</p>
+                                <h2><?= $slid1_left_person_name; ?></h2>
+                                <p><?= $slid1_left_person_info; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single testimonial -->
+                    <div class="testimonial">
+                        <span>‘​‌‘​‌</span>
+                        <p><?= get_theme_mod('slid1-text-right'); ?></p>
+                        <div class="client-info">
+                            <div class="avatar">
+                                <img src="<?php echo get_theme_mod('client2-image'); ?>" alt="">
+                            </div>
+                            <div class="client-name">
+                                <h2><?= get_theme_mod('slid1-right-person-name'); ?></h2>
+                                <p><?= get_theme_mod('slid1-right-person-info'); ?></p>
                             </div>
                         </div>
                     </div>
@@ -157,20 +177,6 @@ $second_image = get_theme_mod('second-image');
                         <div class="client-info">
                             <div class="avatar">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/01.jpg" alt="">
-                            </div>
-                            <div class="client-name">
-                                <h2>Michael Smith</h2>
-                                <p>CEO Company</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- single testimonial -->
-                    <div class="testimonial">
-                        <span>‘​‌‘​‌</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
-                        <div class="client-info">
-                            <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/02.jpg" alt="">
                             </div>
                             <div class="client-name">
                                 <h2>Michael Smith</h2>

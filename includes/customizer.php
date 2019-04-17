@@ -131,6 +131,112 @@ class Customiser
             'description' => 'change this video',
             // 'type' => 'file',
         ]);
+        // ::::::::: section cient test temoinial:::::::
+        $wp_customize->add_section('client-test', [
+            'panel' => 'sections-panel',
+            'title' => 'Modifier section client test'
+        ]);
+        // le titre
+        $wp_customize->add_setting('client-test-titre', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_control('control-client-test-titre', [
+            'section' => 'client-test',
+            'settings' => 'client-test-titre',
+            'label' => 'for-title',
+            'description' => 'change the title',
+            'type' => 'text'
+        ]);
+        // settings slide1 left
+        $wp_customize->add_setting('slid1-text-left', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('client1-image');
+        $wp_customize->add_setting('slid1-left-person-name', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('slid1-left-person-info', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        // control slid1 left
+        $wp_customize->add_control('control-slid1-text-left', [
+            'section' => 'client-test',
+            'settings' => 'slid1-text-left',
+            'label' => 'for-paragraph left in the first slide',
+            'description' => 'change the text',
+            'type' => 'textarea'
+        ]);
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'client1-image', // setting-id
+            [
+                'label' => 'Add the image',
+                'section' => 'client-test',
+            ]
+        ));
+        $wp_customize->add_control('control-slid1-left-person-name', [
+            'section' => 'client-test',
+            'settings' => 'slid1-left-person-name',
+            'label' => 'for -slide1- person name',
+            'description' => 'change the text',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('control-slid1-left-person-info', [
+            'section' => 'client-test',
+            'settings' => 'slid1-left-person-info',
+            'label' => 'for -slide1- person info',
+            'description' => 'change the text',
+            'type' => 'text'
+        ]);
+        // settings slide 1 right
+        $wp_customize->add_setting('slid1-text-right', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('client2-image');
+        $wp_customize->add_setting('slid1-right-person-name', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('slid1-right-person-info', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        // control slid1
+        $wp_customize->add_control('control-slid1-text-right', [
+            'section' => 'client-test',
+            'settings' => 'slid1-text-right',
+            'label' => 'for-paragraph right in the first slide',
+            'description' => 'change the text',
+            'type' => 'textarea'
+        ]);
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'client2-image', // setting-id
+            [
+                'label' => 'Add the image',
+                'section' => 'client-test',
+            ]
+        ));
+        $wp_customize->add_control('control-slid1-right-person-name', [
+            'section' => 'client-test',
+            'settings' => 'slid1-right-person-name',
+            'label' => 'Add a person name',
+            'description' => 'change the text',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('control-slid1-right-person-info', [
+            'section' => 'client-test',
+            'settings' => 'slid1-right-person-info',
+            'label' => 'Add a person info',
+            'description' => 'change the text',
+            'type' => 'text'
+        ]);
+
         //////////////section promotion////////////
         $wp_customize->add_section('promotion', [
             'panel' => 'sections-panel',
