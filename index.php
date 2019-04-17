@@ -1,7 +1,7 @@
 <?php get_header();
-$carousel_title = get_theme_mod('titre-carousel');
-$first_image = get_theme_mod('image1');
-$second_image = get_theme_mod('image2');
+// $carousel_title = get_theme_mod('titre-carousel');
+$first_image = get_theme_mod('first-image');
+$second_image = get_theme_mod('second-image');
 ?>
 
 <!-- Header section end -->
@@ -19,7 +19,7 @@ $second_image = get_theme_mod('image2');
     </div>
     <!-- slider -->
     <div id="hero-slider" class="owl-carousel">
-        <div class="item  hero-item" data-bg="<?php echo get_template_directory_uri(); ?>/img/01.jpg"></div>
+        <div class="item  hero-item" data-bg="<?= $first_image; ?>"></div>
         <div class="item  hero-item" data-bg="<?php echo get_template_directory_uri(); ?>/img/02.jpg"></div>
     </div>
 </div>
@@ -375,14 +375,17 @@ $second_image = get_theme_mod('image2');
 </div>
 <!-- Team Section end-->
 
-
+<?php
+$titre_promotion = get_theme_mod('titre-promotion');
+$text_promotion = get_theme_mod('text-promotion');
+?>
 <!-- Promotion section -->
 <div class="promotion-section">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h2>Are you ready to stand out?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est.</p>
+                <h2><?= $titre_promotion; ?></h2>
+                <p><?= $text_promotion; ?></p>
             </div>
             <div class="col-md-3">
                 <div class="promo-btn-area">

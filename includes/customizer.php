@@ -47,14 +47,14 @@ class Customiser
     public static function about_section($wp_customize)
     {
         //panel
-        $wp_customize->add_panel('section-about-panel', [
-            'title' => 'About Section',
+        $wp_customize->add_panel('sections-panel', [
+            'title' => 'changings-sections',
             'decription' => 'personaliser la section'
         ]);
         //section
         $wp_customize->add_section('about', [
-            'panel' => 'section-about-panel',
-            'title' => 'modifier les about'
+            'panel' => 'sections-panel',
+            'title' => 'Modifier Section-about'
         ]);
         //settings
         $wp_customize->add_setting('titreBegin', [
@@ -115,6 +115,7 @@ class Customiser
             'type' => 'textarea'
         ]);
     }
+
     public static function custom_video($wp_customize)
     {
 
@@ -132,10 +133,88 @@ class Customiser
             'label' => 'to change this video',
             'description' => 'change this video',
             // 'type' => 'file',
+        ]);
+    }
 
+    public static function customize_myCarousel($wp_customize)
+    {
+
+        $wp_customize->add_section('mon-carousel', [
+            'panel' => '',
+            'title' => 'Modifier le Carousel'
+        ]);
+        $wp_customize->add_setting('first-image', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field'
+        ]);
+        $wp_customize->add_setting('second-image', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_text_field'
+        ]);
+        // $wp_customize->add_control('first-image-control', WP_Customize_Image_Control(
+        //     $wp_customize,
+        //     'first-image', // setting-id
+        //     [
+        //         'label' => 'image carousel 1',
+        //         'section' => 'mon-carousel',
+        //     ]
+        // ));
+        $wp_customize->add_control('first-image-control', [
+            'section' => 'mon-carousel',
+            'settings' => 'first-image',
+            'label' => 'to change the first image',
+            'description' => 'change the image',
+            // 'type' => 'file',
+            // 'accept' => 'image/*'
+
+        ]);
+        $wp_customize->add_control('second-image-control', [
+            'section' => 'mon-carousel',
+            'settings' => 'second-image',
+            'label' => 'to change the second image',
+            'description' => 'change the image',
+            // 'type' => 'file',    
+        ]);
+    }
+
+    public static function promotion_section($wp_customize)
+    {
+        //panel
+        // $wp_customize->add_panel('section-promotion-panel', [
+        //     'title' => 'promotion Section',
+        //     'decription' => 'personaliser la section'
+        // ]);
+        //section
+        $wp_customize->add_section('promotion', [
+            'panel' => 'sections-panel',
+            'title' => 'Modifier Promotion-section'
+        ]);
+        //settings
+        $wp_customize->add_setting('titre-promotion', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('text-promotion', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+
+        //control
+        $wp_customize->add_control('promotion-control-title', [
+            'section' => 'promotion',
+            'settings' => 'titre-promotion',
+            'label' => 'Change The title',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('promotion-control-para', [
+            'section' => 'promotion',
+            'settings' => 'text-promotion',
+            'label' => 'Change The text',
+            'type' => 'textarea'
         ]);
     }
 }
-// add_action('customize_register', [Customiser::class, 'customize_carousel']);
 add_action('customize_register', [Customiser::class, 'about_section']);
 add_action('customize_register', [Customiser::class, 'custom_video']);
+add_action('customize_register', [Customiser::class, 'customize_myCarousel']);
+add_action('customize_register', [Customiser::class, 'promotion_section']);
