@@ -30,7 +30,7 @@
     <!-- Header section -->
     <header class="header-section">
         <div class="logo">
-            <img src=<?php echo get_bloginfo('large'); ?> alt=""><!-- Logo -->
+            <a href="#"><?php echo the_custom_logo(); ?></a>
         </div>
         <!-- Navigation -->
         <div class="responsive"><i class="fa fa-bars"></i></div>

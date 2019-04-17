@@ -20,10 +20,13 @@ class Menu
     // }
     public static function ajout_filter_li($att)
     {
-        $att['class'] = 'active';
+        if ($att['class'] == 'menu-item menu-item-type-post_type menu-item-object-page current-menu-item') {
+
+            $att['class'] = 'active';
+        }
         return $att;
     }
 }
 add_action('after_setup_theme', [Menu::class, 'addMenu']);
 // add_filter('nav_menu_link_attributes', [Menu::class, 'ajout_filtre'], 10, 1);
-// add_filter('nav_menu_css_class', [Menu::class, 'ajout_filter_li'], 10, 1);
+add_filter('nav_menu_css_class', [Menu::class, 'ajout_filter_li'], 10, 1);
