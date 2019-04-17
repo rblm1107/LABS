@@ -13,7 +13,7 @@ $second_image = get_theme_mod('second-image');
 <div class="hero-section">
     <div class="hero-content">
         <div class="hero-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/big-logo.png" alt="">
+            <img src="<?= get_theme_mod('titre-big-logo'); ?>" alt="">
             <p><?= get_bloginfo('description'); ?></p>
         </div>
     </div>

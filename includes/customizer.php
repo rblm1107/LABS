@@ -9,6 +9,22 @@ class Customiser
             'title' => 'HOME-sections',
             'decription' => 'personaliser la section'
         ]);
+        // :::::the big logo or title:::::::::
+        $wp_customize->add_section('modifier-titre', [
+            'panel' => 'sections-panel',
+            'title' => 'Modifier le titre-image de votre site'
+        ]);
+        // setting
+        $wp_customize->add_setting('titre-big-logo');
+        //control
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'titre-big-logo', // setting-id
+            [
+                'label' => 'Change the logo-title',
+                'section' => 'modifier-titre',
+            ]
+        ));
         //::::::::::::section carousel:::::::
         $wp_customize->add_section('mon-carousel', [
             'panel' => 'sections-panel',
