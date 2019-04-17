@@ -20,7 +20,7 @@ $second_image = get_theme_mod('second-image');
     <!-- slider -->
     <div id="hero-slider" class="owl-carousel">
         <div class="item  hero-item" data-bg="<?= $first_image; ?>"></div>
-        <div class="item  hero-item" data-bg="<?php echo get_template_directory_uri(); ?>/img/02.jpg"></div>
+        <div class="item  hero-item" data-bg="<?php echo $second_image; ?>"></div>
     </div>
 </div>
 <!-- Intro Section -->
