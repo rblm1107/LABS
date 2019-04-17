@@ -6,7 +6,7 @@ $second_image = get_theme_mod('image2');
 
 <!-- Header section end -->
 
-<!-- FIN HEADER
+<!-- FIN HEADER 
 	============================================ -->
 
 <!-- Intro Section -->
@@ -73,6 +73,7 @@ $second_image = get_theme_mod('image2');
     $titreEnd = get_theme_mod('titreEnd');
     $para1 = get_theme_mod('text-left');
     $para2 = get_theme_mod('text-right');
+    $video = get_theme_mod('video');
     ?>
 
     <!-- About contant -->
@@ -98,7 +99,8 @@ $second_image = get_theme_mod('image2');
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/video.jpg" alt="">
-                        <a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup">
+                        <!-- <a href="https://www.youtube.com/watch?v=JgHfx2v9zOU" class="video-popup"> -->
+                        <a href="<?= $video; ?>" class="video-popup">
                             <i class="fa fa-play"></i>
                         </a>
                     </div>

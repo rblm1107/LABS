@@ -115,6 +115,27 @@ class Customiser
             'type' => 'textarea'
         ]);
     }
+    public static function custom_video($wp_customize)
+    {
+
+        $wp_customize->add_section('ma-video', [
+            'panel' => '',
+            'title' => 'Modifier la Video'
+        ]);
+        $wp_customize->add_setting('video', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_control('video-control', [
+            'section' => 'ma-video',
+            'settings' => 'video',
+            'label' => 'to change this video',
+            'description' => 'change this video',
+            // 'type' => 'file',
+
+        ]);
+    }
 }
 // add_action('customize_register', [Customiser::class, 'customize_carousel']);
 add_action('customize_register', [Customiser::class, 'about_section']);
+add_action('customize_register', [Customiser::class, 'custom_video']);

@@ -1,7 +1,7 @@
 <?php
-class ThemeSupport
+class Theme_supp
 {
-    function theme_support()
+    public static function theme_support()
     {
         // add_theme_support('post-thumbnails');
         // add_theme_support('custom-background');
@@ -9,4 +9,4 @@ class ThemeSupport
     }
 }
 
-add_action('init', [ThemeSupport::class, 'theme_support']);
+add_action('init', [Theme_supp::class, 'theme_support']);
