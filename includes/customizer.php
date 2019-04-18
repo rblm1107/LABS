@@ -266,5 +266,91 @@ class Customiser
             'type' => 'textarea'
         ]);
     }
+    public static function custom_contact_page($wp_customize)
+    {
+        //panel
+        $wp_customize->add_panel('contact-panel', [
+            'title' => 'Personaliser la page contact',
+            'decription' => 'personaliser la section'
+        ]);
+        ///section contact me
+        $wp_customize->add_section('contact-us', [
+            'panel' => 'contact-panel',
+            'title' => 'Modifier contact-us section'
+        ]);
+        //settings
+        $wp_customize->add_setting('contact-us-titre', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-text', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-office', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-adress', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-city', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-phone', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_setting('contact-us-mail', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        //control
+        $wp_customize->add_control('contact-us-control-titre', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-titre',
+            'label' => 'Change The title',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('contact-us-control-text', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-text',
+            'label' => 'Change The text',
+            'type' => 'textarea'
+        ]);
+        $wp_customize->add_control('contact-us-control-office', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-office',
+            'label' => 'Nom de bureau',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('contact-us-control-adress', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-adress',
+            'label' => 'Ajouter votre adresse',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('contact-us-control-city', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-city',
+            'label' => 'Ajouter un code postal et ville',
+            'type' => 'text'
+        ]);
+        $wp_customize->add_control('contact-us-control-phone', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-phone',
+            'label' => 'Add a phone number',
+            'type' => 'phone'
+        ]);
+        $wp_customize->add_control('contact-us-control-mail', [
+            'section' => 'contact-us',
+            'settings' => 'contact-us-mail',
+            'label' => 'Add email adress',
+            'type' => 'email'
+        ]);
+    }
 }
 add_action('customize_register', [Customiser::class, 'custom_home_sections']);
+add_action('customize_register', [Customiser::class, 'custom_contact_page']);
