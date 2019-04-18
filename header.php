@@ -30,7 +30,7 @@
     <!-- Header section -->
     <header class="header-section">
         <div class="logo">
-            <a href="#"><?php echo the_custom_logo(); ?></a>
+            <a href="http://localhost/LABS-project/"><?php echo the_custom_logo(); ?></a>
         </div>
         <!-- Navigation -->
         <div class="responsive"><i class="fa fa-bars"></i></div>

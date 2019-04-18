@@ -8,10 +8,10 @@
     <div class="overlay"></div>
     <div class="container text-right">
         <div class="page-info">
-            <h2>Contact</h2>
+            <h2><?php echo get_the_title(); ?></h2>
             <div class="page-links">
-                <a href="#">Home</a>
-                <span>Contact</span>
+                <a href="http://localhost/LABS-project/">Home</a>
+                <span><?php echo get_the_title(); ?></span>
             </div>
         </div>
     </div>

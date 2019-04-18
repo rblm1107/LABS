@@ -20,7 +20,8 @@ class Menu
     // }
     public static function ajout_filter_li($att)
     {
-        if ($att['class'] == 'menu-item menu-item-type-post_type menu-item-object-page current-menu-item') {
+        //il faut utiliser in array methode if ($att['class'] == 'current-menu-item')
+        if (in_array('current-menu-item', $att)) {
 
             $att['class'] = 'active';
         }
