@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 </header>
 <!-- Header section end -->
 
@@ -40,7 +41,7 @@
             </div>
             <!-- contact form -->
             <div class="col-md-6 col-pull">
-                <form class="form-class" id="con_form">
+                <form class="form-class" id="con_form" method="post" action="page-send-mail.php">
                     <div class="row">
                         <div class="col-sm-6">
                             <input type="text" name="name" placeholder="Your name">
@@ -51,7 +52,8 @@
                         <div class="col-sm-12">
                             <input type="text" name="subject" placeholder="Subject">
                             <textarea name="message" placeholder="Message"></textarea>
-                            <button class="site-btn">send</button>
+                            <!-- <button type="submit" value="send" class="site-btn">send</button> -->
+                            <input type="submit" class="site-btn" value="send" name="send">
                         </div>
                     </div>
                 </form>
