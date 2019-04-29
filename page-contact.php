@@ -2,7 +2,16 @@
 
 </header>
 <!-- Header section end -->
-
+<?php
+function sanitize($items)
+{
+    // $items = strip_tags($items);
+    $items = trim($items);
+    $items = stripslashes($items);
+    $items = htmlspecialchars($items);
+    return $items;
+}
+?>
 
 <!-- Page header -->
 <div class="page-top-section">
@@ -39,25 +48,8 @@
                 <p class="con-item"><?= get_theme_mod('contact-us-phone'); ?></p>
                 <p class="con-item"><?= get_theme_mod('contact-us-mail'); ?></p>
             </div>
-            <!-- contact form -->
-            <div class="col-md-6 col-pull">
-                <form class="form-class" id="con_form" method="post" action="page-send-mail.php">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <input type="text" name="name" placeholder="Your name">
-                        </div>
-                        <div class="col-sm-6">
-                            <input type="text" name="email" placeholder="Your email">
-                        </div>
-                        <div class="col-sm-12">
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="message" placeholder="Message"></textarea>
-                            <!-- <button type="submit" value="send" class="site-btn">send</button> -->
-                            <input type="submit" class="site-btn" value="send" name="send">
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <!--/////////////////////// contact form :::::::::::::::::::::::::::::::::-->
+            <?php get_template_part('templates/mail'); ?>
         </div>
     </div>
 </div>
