@@ -30,9 +30,9 @@ function sanitize($items)
 
 
 <!-- Google map -->
-<div class="map" id="map-area"></div>
-
-
+<div class="map">
+    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=<?= urlencode(get_theme_mod('map-content')); ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" height="800" width="100%"></iframe>
+</div>
 <!-- Contact section -->
 <div class="contact-section spad fix">
     <div class="container">

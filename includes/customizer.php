@@ -350,6 +350,22 @@ class Customiser
             'label' => 'Add email adress',
             'type' => 'email'
         ]);
+        /// pour la section de map
+        $wp_customize->add_section('map', [
+            'panel' => 'contact-panel',
+            'title' => 'Modifier la Map'
+        ]);
+        //settings
+        $wp_customize->add_setting('map-content', [
+            'type' => 'theme_mod',
+            'sanitize_callback' => 'sanitize_textarea_field'
+        ]);
+        $wp_customize->add_control('map-control', [
+            'section' => 'map',
+            'settings' => 'map-content',
+            'label' => 'Add adress',
+            // 'type' => 'text'
+        ]);
     }
 }
 add_action('customize_register', [Customiser::class, 'custom_home_sections']);
