@@ -3,10 +3,7 @@
 $first_image = get_theme_mod('first-image');
 $second_image = get_theme_mod('second-image');
 ?>
-<?php
-// mysql_connect("localhost", "root", "") or die(mysql_error());
-// mysql_select_db("labs") or die(mysql_error());
-?>
+
 
 <!-- Header section end -->
 

@@ -27,117 +27,36 @@
         </div>
         <div class="row">
             <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-023-flask"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Get in the lab</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-011-compass"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Projects online</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-037-idea"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>SMART MARKETING</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
+            <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = [
+                'post_type' => 'services',
+                'posts_per_page' => 9,
+                'paged' => $paged
+                // 'category_name' => 'service'
+            ];
+            $query = new WP_Query($args);
+            while ($query->have_posts()) : $query->the_post(); ?>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="service">
+                        <div class="icon">
+                            <i class="<?php echo get_post_meta(get_the_ID(), 'icon', true); ?>"></i>
+                        </div>
+                        <div class="service-text">
+                            <h2>
+                                <?php the_title(); ?>
+                            </h2>
+                            <p>
+                                <?php the_content(); ?>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-039-vector"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Social Media</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-036-brainstorming"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Brainstorming</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-026-search"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Documented</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-018-laptop-1"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Responsive</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-043-sketch"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Retina ready</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
-            <!-- single service -->
-            <div class="col-md-4 col-sm-6">
-                <div class="service">
-                    <div class="icon">
-                        <i class="flaticon-012-cube"></i>
-                    </div>
-                    <div class="service-text">
-                        <h2>Ultra modern</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php "<br>" . next_post_link('next'); ?>
         </div>
-        <div class="text-center">
-            <a href="" class="site-btn">Browse</a>
-        </div>
+
     </div>
 </div>
 <!-- services section end -->
@@ -186,7 +105,7 @@
             <!-- Devices -->
             <div class="col-md-4 col-sm-4 devices">
                 <div class="text-center">
-                    <img src="wp-content/themes/labs-theme/img/device.png" alt="">
+                    <img src="<?php echo get_template_directory_uri() ?>/img/device.png" alt="">
                 </div>
             </div>
             <!-- feature item -->
