@@ -16,7 +16,7 @@
         ?>
     <?php endif; ?>
 
-    <form class="form-class" id="con_form" action="<?= get_admin_url() . '/?action=send-mail'; ?>" method="post">
+    <form class="form-class" id="con_form" action="<?= get_admin_url() . '/?action=send-mail'; ?>#contact-row" method="post">
         <div class="row">
 
             <div class="col-sm-6">
