@@ -269,14 +269,25 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
             <h2>Get in <span>the Lab</span> and meet the team</h2>
         </div>
         <div class="row">
-            <!-- single member -->
-            <div class="col-sm-4">
-                <div class="member">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/team/1.jpg" alt="">
-                    <h2>Christinne Williams</h2>
-                    <h3>Project Manager</h3>
+
+            <?php
+            $args = [
+                'post_type' => 'team',
+                'posts_per_page' => 1,
+                // 'paged' => $paged,
+                'orderby' => 'rand',
+            ];
+            $query = new WP_Query($args);
+            while ($query->have_posts()) : $query->the_post(); ?>
+                <!-- single member -->
+                <div class="col-sm-4">
+                    <div class="member">
+                        <?php the_post_thumbnail(); ?>
+                        <h2><?php the_title(); ?></h2>
+                        <h3><?php the_content(); ?></h3>
+                    </div>
                 </div>
-            </div>
+            <?php endwhile; ?>
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
@@ -286,13 +297,23 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
                 </div>
             </div>
             <!-- single member -->
-            <div class="col-sm-4">
-                <div class="member">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/team/3.jpg" alt="">
-                    <h2>Christinne Williams</h2>
-                    <h3>Digital designer</h3>
+            <?php
+            $args = [
+                'post_type' => 'team',
+                'posts_per_page' => 1,
+                // 'paged' => $paged,
+                'orderby' => 'rand',
+            ];
+            $query = new WP_Query($args);
+            while ($query->have_posts()) : $query->the_post(); ?>
+                <div class="col-sm-4">
+                    <div class="member">
+                        <?php the_post_thumbnail(); ?>
+                        <h2><?php the_title(); ?></h2>
+                        <h3><?php the_content(); ?></h3>
+                    </div>
                 </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </div>
