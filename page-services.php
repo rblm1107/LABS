@@ -28,11 +28,11 @@
         <div class="row">
             <!-- single service -->
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            // $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
             $args = [
                 'post_type' => 'services',
                 'posts_per_page' => 9,
-                'paged' => $paged
+                'paged' => $paged,
                 // 'category_name' => 'service'
             ];
             $query = new WP_Query($args);
@@ -53,8 +53,14 @@
                         </div>
                     </div>
                 </div>
-            <?php endwhile; ?>
-            <?php "<br>" . next_post_link('next'); ?>
+            <?php endwhile;
+        echo paginate_links([
+            'total' => $query->max_num_pages,
+        ]);
+
+
+        ?>
+
         </div>
 
     </div>
@@ -157,7 +163,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="sv-card">
                     <div class="card-img">
-                        <img src="wp-content/themes/labs-theme/img/card-1.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/card-1.jpg" alt="">
                     </div>
                     <div class="card-text">
                         <h2>Get in the lab</h2>
@@ -169,7 +175,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="sv-card">
                     <div class="card-img">
-                        <img src="wp-content/themes/labs-theme/img/card-2.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/card-2.jpg" alt="">
                     </div>
                     <div class="card-text">
                         <h2>Projects online</h2>
@@ -181,7 +187,7 @@
             <div class="col-md-4 col-sm-12">
                 <div class="sv-card">
                     <div class="card-img">
-                        <img src="wp-content/themes/labs-theme/img/card-3.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/card-3.jpg" alt="">
                     </div>
                     <div class="card-text">
                         <h2>SMART MARKETING</h2>
