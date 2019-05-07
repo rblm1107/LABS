@@ -27,7 +27,7 @@
                 <!-- Single Post -->
                 <div class="single-post">
                     <div class="post-thumbnail">
-                        <img src="wp-content/themes/labs-theme/img/blog/blog-1.jpg" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/blog/blog-1.jpg" alt="">
                         <div class="post-date">
                             <h2>03</h2>
                             <h3>Nov 2017</h3>
@@ -47,7 +47,7 @@
                     <!-- Post Author -->
                     <div class="author">
                         <div class="avatar">
-                            <img src="wp-content/themes/labs-theme/img/avatar/03.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/03.jpg" alt="">
                         </div>
                         <div class="author-info">
                             <h2>Lore Williams, <span>Author</span></h2>
@@ -60,7 +60,7 @@
                         <ul class="comment-list">
                             <li>
                                 <div class="avatar">
-                                    <img src="wp-content/themes/labs-theme/img/avatar/01.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/01.jpg" alt="">
                                 </div>
                                 <div class="commetn-text">
                                     <h3>Michael Smith | 03 nov, 2017 | Reply</h3>
@@ -69,7 +69,7 @@
                             </li>
                             <li>
                                 <div class="avatar">
-                                    <img src="wp-content/themes/labs-theme/img/avatar/02.jpg" alt="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/02.jpg" alt="">
                                 </div>
                                 <div class="commetn-text">
                                     <h3>Michael Smith | 03 nov, 2017 | Reply</h3>
@@ -126,12 +126,12 @@
                 <div class="widget-item">
                     <h2 class="widget-title">Instagram</h2>
                     <ul class="instagram">
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/1.jpg" alt=""></li>
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/2.jpg" alt=""></li>
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/3.jpg" alt=""></li>
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/4.jpg" alt=""></li>
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/5.jpg" alt=""></li>
-                        <li><img src="wp-content/themes/labs-theme/img/instagram/6.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/1.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/2.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/3.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/4.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/5.jpg" alt=""></li>
+                        <li><img src="<?php echo get_template_directory_uri(); ?>/img/instagram/6.jpg" alt=""></li>
                     </ul>
                 </div>
                 <!-- Single widget -->
@@ -159,7 +159,7 @@
                 <div class="widget-item">
                     <h2 class="widget-title">Add</h2>
                     <div class="add">
-                        <a href=""><img src="wp-content/themes/labs-theme/img/add.jpg" alt=""></a>
+                        <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/add.jpg" alt=""></a>
                     </div>
                 </div>
             </div>
