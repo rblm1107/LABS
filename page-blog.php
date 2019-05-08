@@ -67,7 +67,11 @@
 
             </div>
             <!-- Sidebar area -->
-            <?php get_template_part('templates/sidebare'); ?>
+
+            <?php
+            dynamic_sidebar("sidebar");
+            get_template_part('templates/blogsidebar');
+            ?>
         </div>
     </div>
 </div>
@@ -76,6 +80,7 @@
 
 <!-- newsletter section -->
 <?php get_template_part('templates/newsletter'); ?>
+
 <!-- newsletter section end-->
 
 

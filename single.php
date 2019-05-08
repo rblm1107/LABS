@@ -100,7 +100,7 @@
                 </div>
             </div>
             <!-- Sidebar area -->
-            <?php get_template_part('templates/sidebare'); ?>
+            <?php get_template_part('templates/blogsidebar'); ?>
         </div>
     </div>
 </div>
