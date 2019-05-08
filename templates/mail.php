@@ -1,18 +1,18 @@
 <div class="col-md-6 col-pull">
 
     <!-- On vérifie si une notification existe en variable de session -->
-    <?php if (isset($_SESSION['notice'])) : ?>
+    <?php if (isset($_SESSION['notices'])) : ?>
         <?php
         // on récupère les variables de session et on les stocks dans des variables plus simple à utiliser
-        $status = $_SESSION['notice']['status'];
-        $message = $_SESSION['notice']['message'];
+        $status = $_SESSION['notices']['status'];
+        $message = $_SESSION['notices']['message'];
         ?>
         <div class="notice notice-<?= $status; ?> is-dismissible">
             <p><?= $message; ?></p>
         </div>
         <?php
         // on supprime la notification des variables de sessions afin qu'elle ne s'affiche plus au rechargement de la page
-        unset($_SESSION['notice']);
+        unset($_SESSION['notices']);
         ?>
     <?php endif; ?>
 
@@ -29,7 +29,7 @@
                 <input type="text" name="subjects" placeholder="Subject" value="<?= $_SESSION['old']['subjects']; ?>">
                 <textarea name="message" placeholder="Message"><?= $_SESSION['old']['message']; ?></textarea>
                 <button type="submit" class="site-btn">send</button>
-                <p><?php echo $_SESSION['notice']['status']; ?></p>
+                <p><?php echo $_SESSION['notices']['status']; ?></p>
             </div>
 
         </div>
