@@ -37,8 +37,8 @@
                         <div class="post-thumbnail">
                             <?php the_post_thumbnail(); ?>
                             <div class="post-date">
-                                <h2><?php echo get_the_date(); ?></h2>
-                                <!-- <h3></h3> -->
+                                <h2><?php echo get_the_date('d'); ?></h2>
+                                <h3><?php echo get_the_date('F Y'); ?></h3>
                             </div>
                         </div>
                         <div class="post-content">
@@ -54,7 +54,7 @@
                                 <a href=""> <?php echo get_comments_number() . ' comments'; ?></a>
                             </div>
                             <p> <?php the_excerpt(); ?></p>
-                            <a href="blog-post.html" class="read-more">Read More</a>
+                            <a href="<?= the_permalink(); ?>" class="read-more">Read More</a>
                         </div>
                     </div>
                 <?php endwhile; ?>
