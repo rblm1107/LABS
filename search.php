@@ -35,17 +35,17 @@
                         <div class="post-content">
                             <h2 class="post-title"><?= the_title(); ?></h2>
                             <div class="post-meta">
-                                <a href=""><?= the_author() ?></a>
+                                <a href=""><?= the_author(); ?></a>
                                 <a href="">
                                     <!-- ici la boucle-->
                                     <?php
-                                    $tags = get_the_tags();
-                                    foreach ($tags as $tag) {
-                                        echo $tag->name . ' ,';
-                                    }
-                                    ?>
+                                    $tags = get_tags();
+                                    foreach ($tags as $tag) : ?>
+                                        <a href=""><?php echo $tag->name; ?></a>
+                                    <?php endforeach;
+                                ?>
                                 </a>
-                                <a href=""><?= get_comments_number() ?> Comments</a>
+                                <a href=""><?= get_comments_number() . 'Comments'; ?></a>
                             </div>
                             <p><?= the_excerpt(); ?></p>
                             <a href="<?= the_permalink(get_the_ID()) ?>" class="read-more">Read More</a>

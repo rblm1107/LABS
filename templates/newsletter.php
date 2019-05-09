@@ -21,7 +21,9 @@
                 <?php endif; ?>
                 <!-- newsletter form -->
 
-                <form class="nl-form" action="<?= get_admin_url() . '?action=send-newsletter'; ?>#newsletter" method="post">
+                <form class="nl-form" action="<?= admin_url('admin-post.php'); ?>#newsletter" method="post">
+                    <?php wp_nonce_field('send-newsletter'); ?>
+                    <input type="hidden" name="action" value="send-newsletter">
                     <input type="text" name="emailN" placeholder="Your e-mail here" value="<?= $_SESSION['old']['email']; ?>">
                     <button class="site-btn btn-2">Newsletter</button>
                     <?php wp_nonce_field('send-newsletter'); ?>
