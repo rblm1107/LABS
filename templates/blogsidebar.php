@@ -3,10 +3,8 @@
     <!-- Single widget form -->
     <div class="widget-item">
         <?php get_search_link(); ?>
-        <form action="#" class="search-form" action="<?= get_site_url(); ?>" method="get">
-            <input type="text" placeholder="Search">
-            <button class="search-btn"><i class="flaticon-026-search"></i></button>
-        </form>
+
+        <?php get_template_part('templates/search', 'form'); ?>
     </div>
     <!-- Single widget categories -->
     <!-- Single widget quote-->
