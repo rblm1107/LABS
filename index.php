@@ -324,7 +324,7 @@ $text_promotion = get_theme_mod('text-promotion');
             </div>
             <div class="col-md-3">
                 <div class="promo-btn-area">
-                    <a href="" class="site-btn btn-2">Browse</a>
+                    <a href="http://localhost/LABS-project/blog" class="site-btn btn-2">Browse</a>
                 </div>
             </div>
         </div>
