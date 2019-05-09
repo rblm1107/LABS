@@ -59,11 +59,15 @@
                     </div>
                 <?php endwhile; ?>
                 <!-- Pagination -->
-                <div class="page-pagination">
+                <!-- <div class="page-pagination">
                     <a class="active" href="">01.</a>
                     <a href="">02.</a>
                     <a href="">03.</a>
-                </div>
+                </div> -->
+                <?php echo paginate_links([
+                    'total' => $query->max_num_pages,
+                ]); ?>
+
 
             </div>
             <!-- Sidebar area -->
