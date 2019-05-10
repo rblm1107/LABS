@@ -11,7 +11,7 @@
 <!-- services section -->
 <div class="services-section spad">
     <div class="container">
-        <div class="section-title dark">
+        <div class="section-title dark" id="services">
             <h2>Get in <span>the Lab</span> and see the services</h2>
         </div>
         <div class="row">
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="text-center mt100">
-            <a href="#projects" class="site-btn">Browse</a>
+            <a href="<?php get_template_directory_uri() . '/LABS-project/services/'; ?>#projects" class="site-btn">Browse</a>
         </div>
     </div>
 </div>

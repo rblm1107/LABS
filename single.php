@@ -74,7 +74,7 @@
                             <?php foreach ($comments as $comment) : ?>
                                 <li>
                                     <div class="avatar">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/avatar/01.jpg" alt="">
+                                        <?php echo get_avatar(get_the_author_meta('ID'), 70); ?>
                                     </div>
                                     <div class="commetn-text">
                                         <h3><?= $comment->comment_author ?> | <?= $comment->comment_date ?> | Reply</h3>

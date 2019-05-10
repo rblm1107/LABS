@@ -15,7 +15,7 @@
             <?php
             $tags = get_tags();
             foreach ($tags as $tag) : ?>
-                <li><a href=""><?php echo $tag->name; ?></a></li>
+                <li><a href="<?php echo get_term_link($tag) ?>"><?php echo $tag->name; ?></a></li>
             <?php endforeach;
         ?>
         </ul>

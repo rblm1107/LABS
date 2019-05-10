@@ -265,6 +265,22 @@ class Customiser
             'label' => 'Change The text',
             'type' => 'textarea'
         ]);
+        //::::::::::::section Team:::::::
+        $wp_customize->add_section('team', [
+            'panel' => 'sections-panel',
+            'title' => 'Modifier la section Team'
+        ]);
+        // settings
+        $wp_customize->add_setting('team-image');
+        //control
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'team-image', // setting-id
+            [
+                'label' => 'Add image',
+                'section' => 'team',
+            ]
+        ));
     }
     public static function custom_contact_page($wp_customize)
     {

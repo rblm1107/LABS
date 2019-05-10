@@ -84,7 +84,7 @@ $second_image = get_theme_mod('second-image');
                 </div>
             </div>
             <div class="text-center mt60">
-                <a href="http://localhost/LABS-project/blog/" class="site-btn">View more</a>
+                <a href="<?php get_template_directory_uri(); ?>/LABS-project/blog/" class="site-btn">View more</a>
             </div>
             <!-- popup video -->
             <div class="intro-video">
@@ -245,7 +245,7 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
         </div>
 
         <div class="text-center">
-            <a href="http://localhost/LABS-project/services/" class="site-btn">Browse</a>
+            <a href="<?php get_template_directory_uri(); ?>/LABS-project/services/#services" class="site-btn">Browse</a>
         </div>
     </div>
 </div>
@@ -264,12 +264,12 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
             <?php
             $args = [
                 'post_type' => 'team',
-                'posts_per_page' => 1,
+                'posts_per_page' => 2,
                 // 'paged' => $paged,
                 'orderby' => 'rand',
             ];
             $query = new WP_Query($args);
-            while ($query->have_posts()) : $query->the_post(); ?>
+            if ($query->have_posts()) : $query->the_post(); ?>
                 <!-- single member -->
                 <div class="col-sm-4">
                     <div class="member">
@@ -278,25 +278,18 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
                         <h3><?php the_content(); ?></h3>
                     </div>
                 </div>
-            <?php endwhile; ?>
+            <?php endif; ?>
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/team/2.jpg" alt="">
+                    <img src="<?php echo get_theme_mod('team-image'); ?>" alt="">
                     <h2>Christinne Williams</h2>
                     <h3>Junior developer</h3>
                 </div>
             </div>
             <!-- single member -->
             <?php
-            $args = [
-                'post_type' => 'team',
-                'posts_per_page' => 1,
-                // 'paged' => $paged,
-                'orderby' => 'rand',
-            ];
-            $query = new WP_Query($args);
-            while ($query->have_posts()) : $query->the_post(); ?>
+            if ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-sm-4">
                     <div class="member">
                         <?php the_post_thumbnail(); ?>
@@ -304,7 +297,7 @@ $slid1_left_person_info = get_theme_mod('slid1-left-person-info');
                         <h3><?php the_content(); ?></h3>
                     </div>
                 </div>
-            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

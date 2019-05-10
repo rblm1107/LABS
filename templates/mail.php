@@ -16,6 +16,7 @@
         ?>
     <?php endif; ?>
 
+
     <form class="form-class" id="con_form" action="<?= admin_url('admin-post.php'); ?>#contact-row" method="post">
         <?php wp_nonce_field('send-mail'); ?>
         <input type="hidden" name="action" value="send-mail">

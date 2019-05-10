@@ -2,75 +2,64 @@
 </header>
 <!-- Header section end -->
 <!-- Page header -->
-<div class="page-top-section">
-    <div class="overlay"></div>
-    <div class="container text-right">
-        <div class="page-info">
-            <h2>Blog</h2>
-            <div class="page-links">
-                <a href="#">Home</a>
-                <span>Blog</span>
-            </div>
-        </div>
-    </div>
-</div>
+<?php get_template_part('templates/banner'); ?>
 <!-- Page header end-->
 
 
 <!-- page section -->
 <div class="page-section spad">
     <div class="container">
-        <div class="blog-posts">
-            <?php if (have_posts()) { ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <!-- Post item -->
-                    <div class="post-item">
-                        <div class="post-thumbnail">
-                            <img src="<?php the_post_thumbnail_url(); ?>" alt="">
-                            <div class="post-date">
-                                <h2><?= get_the_date("j"); ?></h2>
-                                <h3><?= get_the_date("F Y"); ?></h3>
+        <div class="row">
+            <div class="col-md-8 col-sm-7 blog-posts">
+                <div class="blog-posts">
+                    <?php if (have_posts()) { ?>
+                        <?php while (have_posts()) : the_post(); ?>
+                            <!-- Post item -->
+                            <div class="post-item">
+                                <div class="post-thumbnail">
+                                    <img src="<?php the_post_thumbnail_url(); ?>" alt="">
+                                    <div class="post-date">
+                                        <h2><?= get_the_date("j"); ?></h2>
+                                        <h3><?= get_the_date("F Y"); ?></h3>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <h2 class="post-title"><?= the_title(); ?></h2>
+                                    <div class="post-meta">
+                                        <a href=""><?= the_author(); ?></a>
+                                        <a href="">
+                                            <!-- ici la boucle-->
+                                            <?php
+                                            $tags = get_tags();
+                                            foreach ($tags as $tag) : ?>
+                                                <a href=""><?php echo $tag->name; ?></a>
+                                            <?php endforeach;
+                                        ?>
+                                        </a>
+                                        <a href=""><?= get_comments_number() . 'Comments'; ?></a>
+                                    </div>
+                                    <p><?= the_excerpt(); ?></p>
+                                    <a href="<?= the_permalink(get_the_ID()) ?>" class="read-more">Read More</a>
+                                </div>
                             </div>
+                        <?php endwhile; ?>
+                    <?php } else { ?>
+                        <h2 style='font-weight:bold;color:#000'>Aucun Resultat</h2>
+                        <div class="alert alert-warning" style="margin-top: 5%">
+                            <p>Désolé, nous n'avons rien trouvé, nous vous invitons à faire une recherche valide</p>
                         </div>
-                        <div class="post-content">
-                            <h2 class="post-title"><?= the_title(); ?></h2>
-                            <div class="post-meta">
-                                <a href=""><?= the_author(); ?></a>
-                                <a href="">
-                                    <!-- ici la boucle-->
-                                    <?php
-                                    $tags = get_tags();
-                                    foreach ($tags as $tag) : ?>
-                                        <a href=""><?php echo $tag->name; ?></a>
-                                    <?php endforeach;
-                                ?>
-                                </a>
-                                <a href=""><?= get_comments_number() . 'Comments'; ?></a>
-                            </div>
-                            <p><?= the_excerpt(); ?></p>
-                            <a href="<?= the_permalink(get_the_ID()) ?>" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-            <?php } else { ?>
-                <h2 style='font-weight:bold;color:#000'>Aucun Resultat</h2>
-                <div class="alert alert-warning" style="margin-top: 5%">
-                    <p>Désolé, nous n'avons rien trouvé, nous vous invitons à faire une recherche valide</p>
+
+
+                    <?php }; ?>
                 </div>
-
-
-            <?php }; ?>
+            </div>
+            <!-- Sidebar area -->
         </div>
     </div>
-    <!-- Sidebar area -->
-    <?php get_template_part('templates/blogsidebar'); ?>
-</div>
-</div>
 </div>
 <!-- page section end-->
 
 
-<!-- newsletter section -->
 <?php get_template_part('templates/newsletter'); ?>
 <!-- newsletter section end-->
 
