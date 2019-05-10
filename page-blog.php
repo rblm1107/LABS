@@ -18,7 +18,7 @@
                 $args = [
                     'post_type' => 'post',
                     'posts_per_page' => 3,
-                    'category_name' => 'post'
+                    // 'category_name' => 'post'
                 ];
                 $query = new WP_Query($args);
                 while ($query->have_posts()) : $query->the_post(); ?>
